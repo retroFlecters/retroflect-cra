@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import SignUpForm from "./components/SignUpForm";
 import SignInForm from "./components/SignInForm";
 import EntryView from "./components/EntryView";
+import EntryControls from "./components/EntryControls";
 
 function App() {
   const [user, setUser] = useState({});
@@ -31,17 +32,26 @@ function App() {
     // redirect to "/" route
   };
 
+
   return (
-    <div>
-      <NavBar handleSignOut={handleSignOutRequest} user={user}></NavBar>
-      <h1>retroFlect</h1>
-      <SignInForm handleRequest={handleSignInRequest} />
-      <br></br>
-      <br></br>
-      <SignUpForm handleRequest={handleSignUpRequest} />
-      <br></br>
-      <br></br>
-      <EntryView entries={entries}></EntryView>
+    <div className="container-fluid">
+      <div className="col-12">
+        <div className="row">
+          <NavBar handleSignOut={handleSignOutRequest} user={user}></NavBar>
+        </div>
+        <div className="row">
+          <h1>retroFlect</h1>
+          <SignInForm handleRequest={handleSignInRequest} />
+          <br></br>
+          <br></br>
+          <SignUpForm handleRequest={handleSignUpRequest} />
+          <br></br>
+          <br></br>
+          <EntryControls></EntryControls>
+          <EntryView entries={entries}></EntryView>
+        </div>
+        </div>
+      </div>
     </div>
   );
 }
