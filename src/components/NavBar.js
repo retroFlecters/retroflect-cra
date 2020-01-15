@@ -18,10 +18,12 @@ const NavBar = ({ handleSignOut, user }) => {
       >
         <span className="navbar-toggler-icon"></span>
       </button>
-      <NavBarProfileDropdown
-        handleSignOut={handleSignOut}
-        user={user}
-      ></NavBarProfileDropdown>
+      {user.email && (
+        <NavBarProfileDropdown
+          handleSignOut={handleSignOut}
+          user={user}
+        ></NavBarProfileDropdown>
+      )}
     </nav>
   );
 };
