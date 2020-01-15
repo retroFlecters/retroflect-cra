@@ -4,7 +4,7 @@ import entriesService from "./services/entries";
 import NavBar from "./components/NavBar";
 import SignUpForm from "./components/SignUpForm";
 import SignInForm from "./components/SignInForm";
-import Entry from "./components/Entry";
+import EntryView from "./components/EntryView";
 
 function App() {
   const [user, setUser] = useState({});
@@ -26,7 +26,7 @@ function App() {
   };
 
   const handleSignOutRequest = async () => {
-    const res = await authService.signOut();
+    await authService.signOut();
     setUser({});
     // redirect to "/" route
   };
@@ -43,7 +43,7 @@ function App() {
       <SignUpForm handleRequest={handleSignUpRequest} />
       <br></br>
       <br></br>
-      <Entry entries={entries}></Entry>
+      <EntryView entries={entries}></EntryView>
     </div>
   );
 }
