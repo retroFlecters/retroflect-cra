@@ -2,11 +2,11 @@ import React from "react";
 
 const NavBarProfileDropdown = ({ handleSignOut, user }) => {
   return (
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item dropdown right">
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav mr-auto">
+        <li className="nav-item dropdown right">
           <a
-            class="nav-link dropdown-toggle"
+            className="nav-link dropdown-toggle"
             href="#"
             id="navbarDropdown"
             role="button"
@@ -16,11 +16,11 @@ const NavBarProfileDropdown = ({ handleSignOut, user }) => {
           >
             Profile
           </a>
-          <div class="dropdown-menu left" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item disabled" href="#">
+          <div className="dropdown-menu left" aria-labelledby="navbarDropdown">
+            <a className="dropdown-item disabled" href="#">
               {`${user.firstName} ${user.lastName}`}
             </a>
-            <button class="dropdown-item" onClick={handleSignOut}>
+            <button className="dropdown-item" onClick={handleSignOut}>
               Sign Out
             </button>
           </div>

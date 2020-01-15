@@ -3,12 +3,12 @@ import NavBarProfileDropdown from "../components/NavBarProfileDropdown";
 
 const NavBar = ({ handleSignOut, user }) => {
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <a className="navbar-brand" href="#">
         retroFlect
       </a>
       <button
-        class="navbar-toggler"
+        className="navbar-toggler"
         type="button"
         data-toggle="collapse"
         data-target="#navbarSupportedContent"
@@ -16,7 +16,7 @@ const NavBar = ({ handleSignOut, user }) => {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon"></span>
       </button>
       <NavBarProfileDropdown
         handleSignOut={handleSignOut}
