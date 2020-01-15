@@ -19,7 +19,7 @@ const NavBar = () => {
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <div class="float-right">
+          <li class="nav-item dropdown right">
             <a
               class="nav-link dropdown-toggle"
               href="#"
@@ -31,13 +31,13 @@ const NavBar = () => {
             >
               Profile
             </a>
-            </div>
             <div class="dropdown-menu left" aria-labelledby="navbarDropdown">
               <a class="dropdown-item disabled" href="#">Signed in as user</a>
               <a class="dropdown-item" href="#">
                 Sign Out
               </a>
             </div>
+          </li>
         </ul>
       </div>
     </nav>
