@@ -1,6 +1,6 @@
 import React from "react";
 
-const NavBar = () => {
+const NavBar = ({ handleSignOut }) => {
   return (
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">
@@ -32,10 +32,13 @@ const NavBar = () => {
               Profile
             </a>
             <div class="dropdown-menu left" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item disabled" href="#">Signed in as user</a>
-              <a class="dropdown-item" href="#">
-                Sign Out
+              <a class="dropdown-item disabled" href="#">
+                Signed in as user
               </a>
+
+              <button class="dropdown-item" onClick={handleSignOut}>
+                Sign Out
+              </button>
             </div>
           </li>
         </ul>
