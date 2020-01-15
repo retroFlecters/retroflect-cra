@@ -9,11 +9,11 @@ const EntryView = ({ entries }) => {
     <div>
     Entry Date:
     <br />
-      <textarea rows={1} cols={50} value={FormatDate(entryDate[0])} />
+      <textarea rows={1} cols={50} value={FormatDate(entryDate[entryDate.length -1])} />
       <br />
       Diary Entry:
       <br />
-      <textarea rows={10} cols={100} value={entryDiary[0]} />
+      <textarea rows={10} cols={100} value={entryDiary[entryDiary.length - 1]} />
     </div>
   );
 
