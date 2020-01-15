@@ -13,10 +13,22 @@ const EntryView = ({ entries }) => {
       <br />
       Diary Entry:
       <br />
-      <textarea rows={10} cols={100} value={entryDiary[entryDiary.length - 1]} />
+      <ExtractEntry entries={entries}></ExtractEntry>
     </div>
   );
 
+};
+
+const count = 0
+
+const ExtractEntry = ({ entries }) => {
+  const entryArray = entries.map(entry => entry)
+  const singleEntry = entryArray[count];
+  if (singleEntry != undefined) {
+    return <textarea rows={10} cols={100} value={singleEntry.diary} />
+
+  };
+return ""
 };
 
 const FormatDate = (date) => {
