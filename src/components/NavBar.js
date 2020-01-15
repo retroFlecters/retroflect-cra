@@ -2,12 +2,12 @@ import React from "react";
 
 const NavBar = () => {
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <a className="navbar-brand" href="/">
         retroFlect
       </a>
       <button
-        class="navbar-toggler"
+        className="navbar-toggler"
         type="button"
         data-toggle="collapse"
         data-target="#navbarSupportedContent"
@@ -15,14 +15,14 @@ const NavBar = () => {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item dropdown right">
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul className="navbar-nav mr-auto">
+          <li className="nav-item dropdown right">
             <a
-              class="nav-link dropdown-toggle"
-              href="#"
+              className="nav-link dropdown-toggle"
+              href="/"
               id="navbarDropdown"
               role="button"
               data-toggle="dropdown"
@@ -31,9 +31,9 @@ const NavBar = () => {
             >
               Profile
             </a>
-            <div class="dropdown-menu left" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item disabled" href="#">Signed in as user</a>
-              <a class="dropdown-item" href="#">
+            <div className="dropdown-menu left" aria-labelledby="navbarDropdown">
+              <a className="dropdown-item disabled" href="/">Signed in as user</a>
+              <a className="dropdown-item" href="/">
                 Sign Out
               </a>
             </div>
