@@ -33,10 +33,8 @@ function App() {
 
   return (
     <div>
-      <NavBar></NavBar>
+      <NavBar handleSignOut={handleSignOutRequest} user={user}></NavBar>
       <h1>retroFlect</h1>
-      <h2>{user.firstName} is signed in.</h2>
-      <button onClick={handleSignOutRequest}>Sign Out</button>
       <SignInForm handleRequest={handleSignInRequest} />
       <br></br>
       <br></br>
