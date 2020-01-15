@@ -34,22 +34,20 @@ function App() {
 
 
   return (
-    <div className="container-fluid">
+    <div>
+      <NavBar handleSignOut={handleSignOutRequest} user={user}></NavBar>
+      <div class="col-12">
+        <h1>retroFlect</h1>
+      </div>
       <div className="col-12">
-        <div className="row">
-          <NavBar handleSignOut={handleSignOutRequest} user={user}></NavBar>
-        </div>
-        <div className="row">
-          <h1>retroFlect</h1>
-          <SignInForm handleRequest={handleSignInRequest} />
-          <br></br>
-          <br></br>
-          <SignUpForm handleRequest={handleSignUpRequest} />
-          <br></br>
-          <br></br>
-          <EntryControls></EntryControls>
-          <EntryView entries={entries}></EntryView>
-        </div>
+        <SignInForm handleRequest={handleSignInRequest} />
+        <br></br>
+        <br></br>
+        <SignUpForm handleRequest={handleSignUpRequest} />
+        <br></br>
+        <br></br>
+        <EntryControls></EntryControls>
+        <EntryView entries={entries}></EntryView>
       </div>
     </div>
   );
