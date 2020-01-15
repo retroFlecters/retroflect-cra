@@ -50,7 +50,6 @@ function App() {
           <EntryControls></EntryControls>
           <EntryView entries={entries}></EntryView>
         </div>
-        </div>
       </div>
     </div>
   );
