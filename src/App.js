@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import authService from "./services/auth";
 import entriesService from "./services/entries";
+import NavBar from "./components/NavBar";
 import SignUpForm from "./components/SignUpForm";
 import SignInForm from "./components/SignInForm";
 import Entry from "./components/Entry";
@@ -32,6 +33,7 @@ function App() {
 
   return (
     <div>
+      <NavBar></NavBar>
       <h1>retroFlect</h1>
       <h2>{user.firstName} is signed in.</h2>
       <button onClick={handleSignOutRequest}>Sign Out</button>
