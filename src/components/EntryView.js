@@ -8,13 +8,14 @@ const EntryView = ({ entries }) => {
   function backOne() {
     if (entryIndex > 0) {
       setEntryIndex(entryIndex - 1)
-    };
+    } else {alert("No older posts");}
   };
 
   function forwardOne() {
     if (entryIndex < entryArrayLength) {
       setEntryIndex(entryIndex + 1)
-    };
+
+    } else {alert("No newer posts");}
   };
 
   function formatDate(date) {
