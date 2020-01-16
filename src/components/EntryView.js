@@ -1,27 +1,60 @@
-import React from "react";
+import React, { useState } from "react";
 
 const EntryView = ({ entries }) => {
 
-  const entryDiary = entries.map(entry => entry.diary)
-  const entryDate = entries.map(entry => entry.entryDate)
+  const [entryIndex, setEntryIndex] = useState(0)
+  const [entryArrayLength, setEntryArrayLength] = useState(0)
+
+  function backOne() {
+    if (entryIndex > 0) {
+      setEntryIndex(entryIndex - 1)
+    } else {alert("No older entries");}
+  };
+
+  function forwardOne() {
+    if (entryIndex < entryArrayLength) {
+      setEntryIndex(entryIndex + 1)
+
+    } else {alert("No newer entries");}
+  };
+
+  function formatDate(date) {
+    let postDate = new Date(date);
+    return postDate.toLocaleDateString()
+  }
+
+  const ExtractEntry = ({ entries }) => {
+
+    if (entries.length !== 0) {
+
+      const entryArray = entries.map(entry => entry);
+      setEntryArrayLength(entryArray.length - 1);
+
+      const singleEntry = entryArray[entryIndex];
+
+      return (
+        <div>
+        Entry Date:
+        <br />
+        <textarea readOnly rows={1} cols={50} value={formatDate(singleEntry.entryDate)} />
+        <br />
+        Diary Entry:
+        <br />
+        <textarea readOnly rows={5} cols={70} value={singleEntry.diary} />
+        </div>
+      )} else {return ""}
+  };
 
   return (
     <div>
-    Entry Date:
-    <br />
-      <textarea rows={1} cols={50} value={FormatDate(entryDate[entryDate.length -1])} />
+      <ExtractEntry entries={entries}></ExtractEntry>
       <br />
-      Diary Entry:
+      <button onClick={backOne}>Back</button>
+      <button onClick={forwardOne}>Forward</button>
       <br />
-      <textarea rows={10} cols={100} value={entryDiary[entryDiary.length - 1]} />
     </div>
   );
 
-};
-
-const FormatDate = (date) => {
-  let postDate = new Date(date);
-  return postDate.toLocaleDateString()
 };
 
 export default EntryView;
