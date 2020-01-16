@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import SignUpForm from "./components/SignUpForm";
 import SignInForm from "./components/SignInForm";
 import EntryView from "./components/EntryView";
+import EntryControls from "./components/EntryControls";
 
 function App() {
   const [user, setUser] = useState({});
@@ -40,12 +41,19 @@ function App() {
   return (
     <div>
       <NavBar handleSignOut={handleSignOutRequest} user={user}></NavBar>
-      <br />
-      <SignInForm handleRequest={handleSignInRequest} />
-      <br />
-      <SignUpForm handleRequest={handleSignUpRequest} />
-      <br />
-      <EntryView entries={entries}></EntryView>
+      <div className="col-12">
+        <div className="jumbotron">
+          <SignInForm handleRequest={handleSignInRequest} />
+          <br></br>
+          <br></br>
+          <SignUpForm handleRequest={handleSignUpRequest} />
+        </div>
+        <br></br>
+        <br></br>
+        <hr></hr>
+        <EntryControls></EntryControls>
+        <EntryView entries={entries}></EntryView>
+      </div>
     </div>
   );
 }
