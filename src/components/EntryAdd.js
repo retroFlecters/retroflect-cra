@@ -16,7 +16,7 @@ const EntryAdd = ({ handleNewEntry }) => {
         <div>
         Entry Date:
         <br />
-        <input type="date" id="start" name="trip-start"
+        <input type="date" id="start" name="trip-start" required
        value={Date()} {...bindEntryDate}/>
 
         <br />
