@@ -7,7 +7,7 @@ const NavBarProfileDropdown = ({ handleSignOut, user }) => {
         <li className="nav-item dropdown right">
           <a
             className="nav-link dropdown-toggle"
-            href="#"
+            href="/"
             id="navbarDropdown"
             role="button"
             data-toggle="dropdown"
@@ -17,7 +17,8 @@ const NavBarProfileDropdown = ({ handleSignOut, user }) => {
             Profile
           </a>
           <div className="dropdown-menu left" aria-labelledby="navbarDropdown">
-            <a className="dropdown-item disabled" href="#">
+            <a className="dropdown-item disabled" href="/">
+              <i className="fas fa-user"></i>{" "}
               {`${user.firstName} ${user.lastName}`}
             </a>
             <button className="dropdown-item" onClick={handleSignOut}>

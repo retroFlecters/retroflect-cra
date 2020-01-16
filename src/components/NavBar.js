@@ -3,8 +3,9 @@ import NavBarProfileDropdown from "../components/NavBarProfileDropdown";
 
 const NavBar = ({ handleSignOut, user }) => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <a className="navbar-brand" href="#">
+    <nav className="navbar navbar-expand-lg navbar-light">
+      <a className="navbar-brand" href="/">
+        <img alt="retroFlect logo" src="/icon.png" height="100"></img>{" "}
         retroFlect
       </a>
       <button
