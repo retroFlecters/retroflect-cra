@@ -41,6 +41,7 @@ function App() {
 
   const handleNewEntry = async entry => {
     const res = await entriesService.create(entry);
+    setEntries(entries.concat(res.data))
     // redirect to "/" route
   };
 
