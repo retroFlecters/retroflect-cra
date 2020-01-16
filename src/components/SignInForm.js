@@ -15,13 +15,15 @@ const SignInForm = ({ handleRequest }) => {
       <h2>Sign In</h2>
       <form onSubmit={handleSubmit}>
         <label>
-          Email:
+          Email:&nbsp;
           <input type="email" {...bindEmail} />
         </label>
+        &nbsp;&nbsp;
         <label>
-          Password:
+          Password:&nbsp;
           <input type="password" {...bindPassword} />
         </label>
+        &nbsp;&nbsp;
         <input type="submit" value="Sign In" />
       </form>
     </>

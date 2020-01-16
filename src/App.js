@@ -34,13 +34,11 @@ function App() {
   return (
     <div>
       <NavBar handleSignOut={handleSignOutRequest} user={user}></NavBar>
-      <h1>retroFlect</h1>
+      <br />
       <SignInForm handleRequest={handleSignInRequest} />
-      <br></br>
-      <br></br>
+      <br />
       <SignUpForm handleRequest={handleSignUpRequest} />
-      <br></br>
-      <br></br>
+      <br />
       <EntryView entries={entries}></EntryView>
     </div>
   );

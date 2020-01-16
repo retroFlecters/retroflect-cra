@@ -17,21 +17,25 @@ const SignUpForm = ({ handleRequest }) => {
       <h2>Sign Up</h2>
       <form onSubmit={handleSubmit}>
         <label>
-          First Name:
+          First Name:&nbsp;
           <input type="text" {...bindFirstName} />
         </label>
+        &nbsp;&nbsp;
         <label>
-          Last Name:
+          Last Name:&nbsp;
           <input type="text" {...bindLastName} />
         </label>
+        &nbsp;&nbsp;
         <label>
-          Email:
+          Email:&nbsp;
           <input type="email" {...bindEmail} />
         </label>
+        &nbsp;&nbsp;
         <label>
-          Password:
+          Password:&nbsp;
           <input type="password" {...bindPassword} />
         </label>
+        &nbsp;&nbsp;
         <input type="submit" value="Sign Up" />
       </form>
     </>
