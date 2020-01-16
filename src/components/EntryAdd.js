@@ -16,15 +16,16 @@ const EntryAdd = ({ handleNewEntry }) => {
         <div>
         Entry Date:
         <br />
-        <input type="date" id="start" name="trip-start"
+        <input type="date" id="start" name="trip-start" required
        value={Date()} {...bindEntryDate}/>
 
         <br />
         Diary Entry:
         <br />
         <textarea rows={5} cols={70} {...bindDiary} />
-        &nbsp;&nbsp;
-        <input type="submit" value="Save" />
+        <br />
+        <br />
+        <input type="submit" value="  Save  " />
         </div>
       </form>
     </>
