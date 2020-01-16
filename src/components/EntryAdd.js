@@ -23,8 +23,9 @@ const EntryAdd = ({ handleNewEntry }) => {
         Diary Entry:
         <br />
         <textarea rows={5} cols={70} {...bindDiary} />
-        &nbsp;&nbsp;
-        <input type="submit" value="Save" />
+        <br />
+        <br />
+        <input type="submit" value="  Save  " />
         </div>
       </form>
     </>

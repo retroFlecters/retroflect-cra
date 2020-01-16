@@ -58,7 +58,6 @@ function App() {
         <br></br>
         <br></br>
         <hr></hr>
-        <EntryControls></EntryControls>
         <EntryView entries={entries}></EntryView>
         <br />
         <EntryAdd handleNewEntry={handleNewEntry} />

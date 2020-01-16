@@ -1,5 +1,6 @@
 import React from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 // import { library } from '@fortawesome/fontawesome-svg-core'
 import {faChevronLeft,  faChevronRight, faCalendarAlt, faPlus, faEdit} from '@fortawesome/free-solid-svg-icons'
 
