@@ -59,6 +59,10 @@ function App() {
             background-color: transparent;
           }
 
+          .navbar-brand {
+            font-size: 40px;
+          }
+
       `}</style>
     </div>
   );
