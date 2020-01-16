@@ -33,6 +33,7 @@ function App() {
     await authService.signOut();
     userSessionService.removeUser();
     setUser({});
+    setEntries([]);
     // redirect to "/" route
   };
 
