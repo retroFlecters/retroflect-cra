@@ -32,16 +32,15 @@ function App() {
     // redirect to "/" route
   };
 
-
   return (
     <div>
       <NavBar handleSignOut={handleSignOutRequest} user={user}></NavBar>
       <div className="col-12">
         <div className="jumbotron">
-        <SignInForm handleRequest={handleSignInRequest} />
-        <br></br>
-        <br></br>
-        <SignUpForm handleRequest={handleSignUpRequest} />
+          <SignInForm handleRequest={handleSignInRequest} />
+          <br></br>
+          <br></br>
+          <SignUpForm handleRequest={handleSignUpRequest} />
         </div>
         <br></br>
         <br></br>
@@ -49,21 +48,6 @@ function App() {
         <EntryControls></EntryControls>
         <EntryView entries={entries}></EntryView>
       </div>
-      <style type="text/css">{`
-          body {
-              background-color: #F0FFFF;
-              font-family: 'Cookie', cursive;
-          }
-
-          Navbar {
-            background-color: transparent;
-          }
-
-          .navbar-brand {
-            font-size: 40px;
-          }
-
-      `}</style>
     </div>
   );
 }
