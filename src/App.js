@@ -41,7 +41,7 @@ function App() {
 
   const handleNewEntry = async entry => {
     const res = await entriesService.create(entry);
-    setEntries(entries.concat(res.data))
+    setEntries(entries.concat(res.data));
     // redirect to "/" route
   };
 
@@ -49,18 +49,26 @@ function App() {
     <div>
       <NavBar handleSignOut={handleSignOutRequest} user={user}></NavBar>
       <div className="col-12">
-        <div className="jumbotron">
-          <SignInForm handleRequest={handleSignInRequest} />
-          <br></br>
-          <br></br>
-          <SignUpForm handleRequest={handleSignUpRequest} />
-        </div>
-        <br></br>
-        <br></br>
-        <hr></hr>
-        <EntryView entries={entries}></EntryView>
-        <br />
-        <EntryAdd handleNewEntry={handleNewEntry} />
+        {!user.email ? (
+          <>
+            {" "}
+            <div className="jumbotron">
+              <SignInForm handleRequest={handleSignInRequest} />
+              <br></br>
+              <br></br>
+              <SignUpForm handleRequest={handleSignUpRequest} />
+            </div>
+            <br></br>
+            <br></br>
+            <hr></hr>
+          </>
+        ) : (
+          <>
+            <EntryView entries={entries}></EntryView>
+            <br />
+            <EntryAdd handleNewEntry={handleNewEntry} />
+          </>
+        )}
       </div>
     </div>
   );
